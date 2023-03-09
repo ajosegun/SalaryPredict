@@ -34,8 +34,8 @@ The dependencies can be installed using pip:
 To use the application, clone the repository and run the app.py file using Python:
 
 ```
-  git clone https://github.com/username/repo.git
-  cd repo
+  git clone https://github.com/ajosegun/SalaryPredict.git
+  cd SalaryPredict
   python app.py
 ```
   
