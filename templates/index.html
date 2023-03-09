@@ -17,19 +17,85 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Experience" required="required" />
-        <input type="text" name="test_score" placeholder="Test Score" required="required" />
-		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+    	<input type="text" name="experience" placeholder="Experience" required="required" pattern="[0-9]+" />
+        <input type="text" name="test_score" placeholder="Test Score" required="required" pattern="[0-9]+" />
+		<input type="text" name="interview_score" placeholder="Interview Score" required="required" pattern="[0-9]+" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
    <br>
    <br>
-   {{ prediction_text }}
+   <div class="prediction">
+    {% if prediction_text %}
+      <h2>Prediction</h2>
+      <p class="result">{{ prediction_text }}</p>
+    {% endif %}
+  </div>
 
  </div>
 
+ <style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .login h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .login input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .login button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .prediction {
+    margin-top: 20px;
+  }
+
+  .prediction h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .prediction .result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+</style>
 
 </body>
 </html>
