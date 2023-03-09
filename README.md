@@ -5,6 +5,8 @@ This is a machine learning project to predict employee salaries based on their y
 ## Demo
 A demo of this application is available on [Render](https://salarypredict.onrender.com/).
 
+[!Salary Prediction](./SalaryPredict.png)
+
 ## Dependencies
 The project requires the following dependencies:
 
@@ -18,8 +20,9 @@ scikit-learn
 
 The dependencies can be installed using pip:
 
-
+```
   pip install flask numpy scikit-learn
+```
 
 ## Usage
 To use the application, clone the repository and run the app.py file using Python:
