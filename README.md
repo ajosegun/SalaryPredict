@@ -1,11 +1,17 @@
-# Employee Salary Prediction -  ML deployment using Render-Demo
+# Employee Salary Prediction 
+## Using Machine Learning, deployment on Render
 
 This is a machine learning project to predict employee salaries based on their years of experience, test score, and interview score. The project uses a Flask web application to create a user interface where users can input employee information, and the application will output the predicted salary.
+
+The code loads a CSV dataset and performs feature engineering to replace null values with appropriate data. It then converts textual data to numerical data and uses linear regression to train a model to predict employee salaries based on features like experience, education, and test scores. 
+
+The model is saved as a pickle file and can be loaded and used for predictions.
+
 
 ## Demo
 A demo of this application is available on [Render](https://salarypredict.onrender.com/).
 
-[!Salary Prediction](./SalaryPredict.png)
+![Salary Prediction](./SalaryPredict.png)
 
 ## Dependencies
 The project requires the following dependencies:
@@ -27,10 +33,11 @@ The dependencies can be installed using pip:
 ## Usage
 To use the application, clone the repository and run the app.py file using Python:
 
-  sh
+```
   git clone https://github.com/username/repo.git
   cd repo
   python app.py
+```
   
 The application will start running on http://localhost:5000/. You can access the user interface by opening a web browser and navigating to http://localhost:5000/.
 
